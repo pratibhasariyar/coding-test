@@ -23,7 +23,7 @@ export class MissionDataService {
     })
   }
 
-  filterResponse = (res, launch?: boolean, land?: boolean, year?: Number | string) => {
+  filterResponse = (res: any, launch?: boolean, land?: boolean, year?: Number | string) => {
     let paramyear: string = '';
     let paramlaunch: boolean;
     let paramland: boolean;
