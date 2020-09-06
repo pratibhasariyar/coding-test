@@ -1,0 +1,109 @@
+    /*mobile view */
+    
+    #missionDetailsBox {
+        padding: 10px;
+    }
+    
+    .container {
+        background: lightgray;
+        padding: 10px;
+    }
+    
+    #filters,
+    #missionDetailsBox {
+        background: snow;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    #missionDetailsBox {
+        padding: 20px;
+    }
+    
+    .filterHeading {
+        text-align: center;
+    }
+    
+    .filterButtons {
+        margin: 5px;
+        width: 40%;
+        text-transform: capitalize;
+    }
+    
+    .buttonContainer {
+        text-align: center;
+    }
+    
+    hr {
+        width: 50%;
+        border-width: 2px;
+    }
+    
+    img {
+        display: block;
+        margin: 0px auto;
+        background: lightgray;
+    }
+    
+    #missionInfo {
+        padding: 15px;
+    }
+    
+    .missionHighlights {
+        color: blue;
+    }
+    /* desktop view*/
+    
+    @media only screen and (min-width: 1025px) and (max-width: 1400px) {
+        #filters {
+            width: 20%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #missionDetails {
+            width: 78%;
+            display: inline-block;
+        }
+        #missionDetailsBox {
+            width: 22%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        hr {
+            width: 80%;
+        }
+        img {
+            width: 100%;
+        }
+        #missionInfo {
+            padding: 0px;
+        }
+    }
+    /* tablet view */
+    
+    @media only screen and (min-width: 700px) and (max-width: 1024px) {
+        #filters {
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #missionDetails {
+            width: 67%;
+            display: inline-block;
+        }
+        #missionDetailsBox {
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        hr {
+            width: 80%;
+        }
+        img {
+            width: 100%;
+        }
+        #missionInfo {
+            padding: 0px;
+        }
+    }

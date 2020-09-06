@@ -1,0 +1,67 @@
+<!-- <h3>SpaceX Launch Programs</h3>
+<button class="btn btn-info" *ngFor=" let year of launchYears " (click)="navigateToFilteredResults(year, 'year') ">{{year}}</button>
+<br> Successful launch
+<button *ngFor="let launchSuccess of trueFalseArray" (click)="navigateToFilteredResults(launchSuccess, 'launch') ">{{launchSuccess}}</button>
+<br> Successful land
+<button *ngFor="let landSuccess of trueFalseArray " (click)="navigateToFilteredResults(landSuccess, 'land') ">{{landSuccess}}</button>
+
+<br><br>
+<div *ngIf="noMission">
+    No Data for this year
+</div>
+<br><br>
+<div *ngFor="let mission of results" class="missionDetailsBox">
+     <img [src]="mission.links.mission_patch_small" /> -->
+<!-- <div>Mission name: {{mission.mission_name}}</div>
+<div>
+    <strong>Mission Ids:</strong>
+    <li *ngFor="let missionids of mission.mission_id">{{missionids}}</li>
+</div>
+<div>Launch Year: {{mission.launch_year}}</div>
+<div>Successful Launch: {{mission.launch_success}}</div>
+<div>Successful Landing:
+    <li *ngFor="let land of mission.rocket.first_stage.cores">
+        {{land.land_success}}
+    </li>
+</div>
+
+</div> -->
+<div class="container">
+    <h2>SpaceX Launch Program</h2>
+    <div id="filters">
+        <h4>Filters</h4>
+        <div class="buttonContainer">
+            <p class="filterHeading">Launch Years</p>
+            <hr>
+            <button class=" btn btn-success filterButtons" *ngFor=" let year of launchYears " (click)="navigateToFilteredResults(year, 'year') ">{{year}}</button>
+            <p class="filterHeading">Successful Launch</p>
+            <hr>
+            <button class="btn btn-success filterButtons" *ngFor="let launchSuccess of trueFalseArray" (click)="navigateToFilteredResults(launchSuccess, 'launch') ">{{launchSuccess}}</button>
+            <p class="filterHeading">Successful Landing</p>
+            <hr>
+            <button class="btn btn-success filterButtons" *ngFor="let landSuccess of trueFalseArray " (click)="navigateToFilteredResults(landSuccess, 'land') ">{{landSuccess}}</button>
+        </div>
+    </div>
+    <div id="missionDetails">
+        <div *ngFor="let mission of results" id="missionDetailsBox">
+            <img [src]="mission.links.mission_patch_small" class="center-block" />
+            <div id="missionInfo">
+                <div class="missionHighlights"><strong>{{mission.mission_name}}</strong>
+                </div>
+                <div>
+                    <strong>Mission Ids:</strong>
+                    <ul class="missionHighlights">
+                        <li *ngFor="let missionids of mission.mission_id">{{missionids}}</li>
+                    </ul>
+                </div>
+                <div><strong>Launch Year:</strong> {{mission.launch_year}}</div>
+                <div><strong>Successful Launch:</strong> {{mission.launch_success ? 'Yes': 'No'}}</div>
+                <div><strong>Successful Landing:</strong> {{mission.rocket.first_stage.cores[0].land_success? 'Yes': 'No'}}
+                    <!-- <li *ngFor="let land of mission.rocket.first_stage.cores">
+                        {{land.land_success ? 'Yes': 'No'}}
+                    </li> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center"><strong>Developed by</strong>: Pratibha Sariyar</div>
